@@ -1,0 +1,11 @@
+# Visual Studio geçici dosyaları
+.vs/
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Diğer gereksizler
+.DS_Store
