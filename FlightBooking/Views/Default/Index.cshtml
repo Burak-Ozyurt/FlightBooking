@@ -21,67 +21,64 @@
                 <div class="row">
                     <div class="col-lg-12">
                         @await Component.InvokeAsync("_BookingTagsComponentPartial")
-                        
                         <div class="booking-wrap">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="bOOKing-tab" data-bs-toggle="tab" data-bs-target="#bOOKing-tab-pane" type="button"
-                                            role="tab" aria-controls="bOOKing-tab-pane" aria-selected="true">
-                                        <i class="flaticon-flight"></i>air BOOKing
+                                    <button class="nav-link active" id="bOOKing-tab" data-bs-toggle="tab" data-bs-target="#bOOKing-tab-pane" type="button" role="tab" aria-controls="bOOKing-tab-pane" aria-selected="true">
+                                        <i class="flaticon-flight"></i> Uçuş Ara
                                     </button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="trips-tab" data-bs-toggle="tab" data-bs-target="#trips-tab-pane" type="button"
-                                            role="tab" aria-controls="trips-tab-pane" aria-selected="false">
-                                        <i class="flaticon-file"></i> my trips
+                                    <button class="nav-link" id="trips-tab" data-bs-toggle="tab" data-bs-target="#trips-tab-pane" type="button" role="tab" aria-controls="trips-tab-pane" aria-selected="false">
+                                        <i class="flaticon-file"></i> Seyahatlerim
                                     </button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="check-tab" data-bs-toggle="tab" data-bs-target="#check-tab-pane" type="button"
-                                            role="tab" aria-controls="check-tab-pane" aria-selected="false">
-                                        <i class="flaticon-tick"></i> check-in
+                                    <button class="nav-link" id="check-tab" data-bs-toggle="tab" data-bs-target="#check-tab-pane" type="button" role="tab" aria-controls="check-tab-pane" aria-selected="false">
+                                        <i class="flaticon-tick"></i> Check-in
                                     </button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="flight-tab" data-bs-toggle="tab" data-bs-target="#flight-tab-pane" type="button"
-                                            role="tab" aria-controls="flight-tab-pane" aria-selected="false">
-                                        <i class="flaticon-clock"></i> Flight status
+                                    <button class="nav-link" id="flight-tab" data-bs-toggle="tab" data-bs-target="#flight-tab-pane" type="button" role="tab" aria-controls="flight-tab-pane" aria-selected="false">
+                                        <i class="flaticon-clock"></i> Uçuş Durumu
                                     </button>
                                 </li>
                             </ul>
+
                             <div class="tab-content" id="myTabContent">
+
                                 <div class="tab-pane fade show active" id="bOOKing-tab-pane" role="tabpanel" aria-labelledby="bOOKing-tab" tabindex="0">
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="tab-content-wrap">
                                                 <div class="content-top">
                                                     <ul>
-                                                        <li>Flights</li>
-                                                        <li><span>Just from $12</span>Geair Stopover</li>
+                                                        <li>Uçuş Ara</li>
+                                                        <li><span>Fırsat</span> Popüler Rotalarda İndirimli Fiyatlar</li>
                                                     </ul>
                                                 </div>
                                                 <form action="#" class="booking-form">
                                                     <ul>
                                                         <li>
                                                             <div class="form-grp">
-                                                                <input type="text" placeholder="From">
+                                                                <label>Nereden</label>
+                                                                <input type="text" placeholder="Şehir veya Havalimanı">
                                                             </div>
                                                         </li>
                                                         <li>
                                                             <div class="form-grp">
-                                                                <input type="text" placeholder="To">
-                                                                <button class="exchange-icon"><i class="flaticon-exchange-1"></i></button>
+                                                                <label>Nereye</label>
+                                                                <input type="text" placeholder="Şehir veya Havalimanı">
+                                                                <button type="button" class="exchange-icon"><i class="flaticon-exchange-1"></i></button>
                                                             </div>
                                                         </li>
                                                         <li>
                                                             <div class="form-grp select">
-                                                                <label for="shortBy">Trip</label>
-                                                                <select id="shortBy" name="select" class="form-select" aria-label="Default select example">
-                                                                    <option value="">Tour type</option>
-                                                                    <option>Adventure Travel</option>
-                                                                    <option>Family Tours</option>
-                                                                    <option>Newest Item</option>
-                                                                    <option>Nature & wildlife</option>
+                                                                <label for="shortBy">Uçuş Tipi</label>
+                                                                <select id="shortBy" name="select" class="form-select">
+                                                                    <option value="">Gidiş - Dönüş</option>
+                                                                    <option>Tek Yön</option>
+                                                                    <option>Çoklu Uçuş</option>
                                                                 </select>
                                                             </div>
                                                         </li>
@@ -89,227 +86,195 @@
                                                             <div class="form-grp date">
                                                                 <ul>
                                                                     <li>
-                                                                        <label for="shortBy">Depart</label>
-                                                                        <input type="text" class="date" placeholder="Select Date">
+                                                                        <label>Gidiş Tarihi</label>
+                                                                        <input type="text" class="date" placeholder="Tarih Seçin">
                                                                     </li>
                                                                     <li>
-                                                                        <label for="shortBy">Return</label>
-                                                                        <input type="text" class="date" placeholder="Select Date">
+                                                                        <label>Dönüş Tarihi</label>
+                                                                        <input type="text" class="date" placeholder="Tarih Seçin">
                                                                     </li>
                                                                 </ul>
                                                             </div>
                                                         </li>
                                                         <li>
-                                                            <div class="form-grp economy">
-                                                                <label for="text">Passenger/ Class</label>
-                                                                <input type="text" id="text" placeholder="1 Passenger, Economy">
+                                                            <div class="form-grp economy dropdown">
+                                                                <label for="passengerCabinInput">Yolcu / Kabin Sınıfı</label>
+                                                                <input type="text" id="passengerCabinInput" class="dropdown-toggle" data-bs-toggle="dropdown" data-bs-offset="0,10" aria-expanded="false" readonly value="1 Yolcu, Ekonomi">
+
+                                                                <div class="dropdown-menu passenger-dropdown-menu p-4" aria-labelledby="passengerCabinInput" style="min-width: 300px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
+
+                                                                    <div class="passenger-type-wrapper">
+                                                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                                                            <div>
+                                                                                <h6 class="mb-0 font-weight-bold" style="font-size: 14px; color:#1b1d21;">Yetişkin</h6>
+                                                                                <small class="text-muted" style="font-size: 11px;">18 yaş ve üzeri</small>
+                                                                            </div>
+                                                                            <div class="d-flex align-items-center gap-2">
+                                                                                <button type="button" class="btn btn-sm btn-outline-secondary px-2 py-0">-</button>
+                                                                                <span class="mx-2 font-weight-bold" style="color:#1b1d21;">1</span>
+                                                                                <button type="button" class="btn btn-sm btn-outline-secondary px-2 py-0">+</button>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                                                            <div>
+                                                                                <h6 class="mb-0 font-weight-bold" style="font-size: 14px; color:#1b1d21;">Çocuk</h6>
+                                                                                <small class="text-muted" style="font-size: 11px;">7 - 17 yaş</small>
+                                                                            </div>
+                                                                            <div class="d-flex align-items-center gap-2">
+                                                                                <button type="button" class="btn btn-sm btn-outline-secondary px-2 py-0">-</button>
+                                                                                <span class="mx-2" style="color:#1b1d21;">0</span>
+                                                                                <button type="button" class="btn btn-sm btn-outline-secondary px-2 py-0">+</button>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                                                            <div>
+                                                                                <h6 class="mb-0 font-weight-bold" style="font-size: 14px; color:#1b1d21;">Bebek</h6>
+                                                                                <small class="text-muted" style="font-size: 11px;">0 - 6 yaş (Kucakta)</small>
+                                                                            </div>
+                                                                            <div class="d-flex align-items-center gap-2">
+                                                                                <button type="button" class="btn btn-sm btn-outline-secondary px-2 py-0">-</button>
+                                                                                <span class="mx-2" style="color:#1b1d21;">0</span>
+                                                                                <button type="button" class="btn btn-sm btn-outline-secondary px-2 py-0">+</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <hr class="my-3">
+
+                                                                    <div class="cabin-class-wrapper mb-3">
+                                                                        <label class="form-label font-weight-bold mb-2" style="font-size: 13px; color:#1b1d21; display:block;">Kabin Sınıfı</label>
+                                                                        <div class="form-check form-check-inline mr-3" style="display: inline-block;">
+                                                                            <input class="form-check-input" type="radio" name="cabinClass" id="cabinEconomy" value="Ekonomi" checked>
+                                                                            <label class="form-check-label" for="cabinEconomy" style="font-size: 13px; color:#1b1d21;">Ekonomi</label>
+                                                                        </div>
+                                                                        <div class="form-check form-check-inline" style="display: inline-block;">
+                                                                            <input class="form-check-input" type="radio" name="cabinClass" id="cabinBusiness" value="Business">
+                                                                            <label class="form-check-label" for="cabinBusiness" style="font-size: 13px; color:#1b1d21;">Business</label>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <button type="button" class="btn btn-primary w-100 btn-sm text-white" data-bs-dismiss="dropdown" style="background-color: #3065b5; border:none; padding: 8px; font-size:13px;">Tamam</button>
+                                                                </div>
                                                             </div>
                                                         </li>
                                                     </ul>
                                                 </form>
                                                 <div class="content-bottom">
-                                                    <a href="booking-details.html" class="promo-code">+ Add Promo code</a>
-                                                    <a href="booking-details.html" class="btn">Show Flights <i class="flaticon-flight-1"></i></a>
+                                                    <a href="#" class="promo-code">+ Promosyon Kodu Ekle</a>
+                                                    <a href="#" class="btn">Uçuşları Listele <i class="flaticon-flight-1"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="tab-pane fade" id="trips-tab-pane" role="tabpanel" aria-labelledby="trips-tab" tabindex="0">
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="tab-content-wrap">
                                                 <div class="content-top">
                                                     <ul>
-                                                        <li>Flights</li>
-                                                        <li><span>Just from $12</span>Geair Stopover</li>
+                                                        <li>Rezervasyon Bilgileri</li>
+                                                        <li>Mevcut rezervasyonlarınızı görüntüleyin, iptal veya değişiklik işlemlerinizi yönetin.</li>
                                                     </ul>
                                                 </div>
                                                 <form action="#" class="booking-form">
-                                                    <ul>
-                                                        <li>
+                                                    <ul class="row match-height">
+                                                        <div class="col-md-5">
                                                             <div class="form-grp">
-                                                                <input type="text" placeholder="From">
+                                                                <label>PNR Kodu (Rezervasyon No)</label>
+                                                                <input type="text" placeholder="Örn: ABC123" style="text-transform: uppercase;">
                                                             </div>
-                                                        </li>
-                                                        <li>
+                                                        </div>
+                                                        <div class="col-md-5">
                                                             <div class="form-grp">
-                                                                <input type="text" placeholder="To">
-                                                                <button class="exchange-icon"><i class="flaticon-exchange-1"></i></button>
+                                                                <label>Yolcunun Soyadı</label>
+                                                                <input type="text" placeholder="Örn: Yılmaz">
                                                             </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="form-grp select">
-                                                                <label for="shortByTwo">Trip</label>
-                                                                <select id="shortByTwo" name="select" class="form-select" aria-label="Default select example">
-                                                                    <option value="">Tour type</option>
-                                                                    <option>Adventure Travel</option>
-                                                                    <option>Family Tours</option>
-                                                                    <option>Newest Item</option>
-                                                                    <option>Nature & wildlife</option>
-                                                                </select>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="form-grp date">
-                                                                <ul>
-                                                                    <li>
-                                                                        <label for="shortBy">Depart</label>
-                                                                        <input type="text" class="date" placeholder="Select Date">
-                                                                    </li>
-                                                                    <li>
-                                                                        <label for="shortBy">Return</label>
-                                                                        <input type="text" class="date" placeholder="Select Date">
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="form-grp economy">
-                                                                <label for="textTwo">Passenger/ Class</label>
-                                                                <input type="text" id="textTwo" placeholder="1 Passenger, Economy">
-                                                            </div>
-                                                        </li>
+                                                        </div>
                                                     </ul>
                                                 </form>
                                                 <div class="content-bottom">
-                                                    <a href="booking-details.html" class="promo-code">+ Add Promo code</a>
-                                                    <a href="booking-details.html" class="btn">Show Flights <i class="flaticon-flight-1"></i></a>
+                                                    <a href="#" class="promo-code"><i class="flaticon-file"></i> Bilet numaramı bilmiyorum</a>
+                                                    <a href="#" class="btn">Rezervasyonu Bul <i class="fa-solid fa-magnifying-glass"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="tab-pane fade" id="check-tab-pane" role="tabpanel" aria-labelledby="check-tab" tabindex="0">
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="tab-content-wrap">
                                                 <div class="content-top">
                                                     <ul>
-                                                        <li>Flights</li>
-                                                        <li><span>Just from $12</span>Geair Stopover</li>
+                                                        <li>Online Check-in</li>
+                                                        <li>Uçuşunuza 24 saat kala online check-in yaparak koltuğunuzu seçebilir ve zaman kazanabilirsiniz.</li>
                                                     </ul>
                                                 </div>
                                                 <form action="#" class="booking-form">
-                                                    <ul>
-                                                        <li>
+                                                    <ul class="row">
+                                                        <div class="col-md-5">
                                                             <div class="form-grp">
-                                                                <input type="text" placeholder="From">
+                                                                <label>PNR Kodu veya Bilet Numarası</label>
+                                                                <input type="text" placeholder="Örn: 2351234567890">
                                                             </div>
-                                                        </li>
-                                                        <li>
+                                                        </div>
+                                                        <div class="col-md-5">
                                                             <div class="form-grp">
-                                                                <input type="text" placeholder="To">
-                                                                <button class="exchange-icon"><i class="flaticon-exchange-1"></i></button>
+                                                                <label>Yolcunun Soyadı</label>
+                                                                <input type="text" placeholder="Yolcu soyadını giriniz">
                                                             </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="form-grp select">
-                                                                <label for="shortByThree">Trip</label>
-                                                                <select id="shortByThree" name="select" class="form-select" aria-label="Default select example">
-                                                                    <option value="">Tour type</option>
-                                                                    <option>Adventure Travel</option>
-                                                                    <option>Family Tours</option>
-                                                                    <option>Newest Item</option>
-                                                                    <option>Nature & wildlife</option>
-                                                                </select>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="form-grp date">
-                                                                <ul>
-                                                                    <li>
-                                                                        <label for="shortBy">Depart</label>
-                                                                        <input type="text" class="date" placeholder="Select Date">
-                                                                    </li>
-                                                                    <li>
-                                                                        <label for="shortBy">Return</label>
-                                                                        <input type="text" class="date" placeholder="Select Date">
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="form-grp economy">
-                                                                <label for="textThree">Passenger/ Class</label>
-                                                                <input type="text" id="textThree" placeholder="1 Passenger, Economy">
-                                                            </div>
-                                                        </li>
+                                                        </div>
                                                     </ul>
                                                 </form>
                                                 <div class="content-bottom">
-                                                    <a href="booking-details.html" class="promo-code">+ Add Promo code</a>
-                                                    <a href="booking-details.html" class="btn">Show Flights <i class="flaticon-flight-1"></i></a>
+                                                    <a href="#" class="promo-code"><i class="fa-solid fa-circle-info"></i> Check-in kuralları ve süreleri</a>
+                                                    <a href="#" class="btn">Check-in Yap <i class="flaticon-tick"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="tab-pane fade" id="flight-tab-pane" role="tabpanel" aria-labelledby="flight-tab" tabindex="0">
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="tab-content-wrap">
                                                 <div class="content-top">
                                                     <ul>
-                                                        <li>Flights</li>
-                                                        <li><span>Just from $12</span>Geair Stopover</li>
+                                                        <li>Uçuş Durumu Sorgulama</li>
+                                                        <li>Uçağınızın kalkış/iniş saatlerini, gecikme durumunu ve terminal bilgilerini anlık takip edin.</li>
                                                     </ul>
                                                 </div>
                                                 <form action="#" class="booking-form">
-                                                    <ul>
-                                                        <li>
+                                                    <ul class="row">
+                                                        <div class="col-md-4">
                                                             <div class="form-grp">
-                                                                <input type="text" placeholder="From">
+                                                                <label>Uçuş Numarası</label>
+                                                                <input type="text" placeholder="Örn: TK1920">
                                                             </div>
-                                                        </li>
-                                                        <li>
+                                                        </div>
+                                                        <div class="col-md-4">
                                                             <div class="form-grp">
-                                                                <input type="text" placeholder="To">
-                                                                <button class="exchange-icon"><i class="flaticon-exchange-1"></i></button>
+                                                                <label>Tarih</label>
+                                                                <input type="text" class="date" placeholder="Bugün / Yarın">
                                                             </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="form-grp select">
-                                                                <label for="shortByFour">Trip</label>
-                                                                <select id="shortByFour" name="select" class="form-select" aria-label="Default select example">
-                                                                    <option value="">Tour type</option>
-                                                                    <option>Adventure Travel</option>
-                                                                    <option>Family Tours</option>
-                                                                    <option>Newest Item</option>
-                                                                    <option>Nature & wildlife</option>
-                                                                </select>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="form-grp date">
-                                                                <ul>
-                                                                    <li>
-                                                                        <label for="shortBy">Depart</label>
-                                                                        <input type="text" class="date" placeholder="Select Date">
-                                                                    </li>
-                                                                    <li>
-                                                                        <label for="shortBy">Return</label>
-                                                                        <input type="text" class="date" placeholder="Select Date">
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="form-grp economy">
-                                                                <label for="textFour">Passenger/ Class</label>
-                                                                <input type="text" id="textFour" placeholder="1 Passenger, Economy">
-                                                            </div>
-                                                        </li>
+                                                        </div>
                                                     </ul>
                                                 </form>
                                                 <div class="content-bottom">
-                                                    <a href="booking-details.html" class="promo-code">+ Add Promo code</a>
-                                                    <a href="booking-details.html" class="btn">Show Flights <i class="flaticon-flight-1"></i></a>
+                                                    <a href="#" class="promo-code"><i class="flaticon-flight"></i> Rota bazlı uçuş arama</a>
+                                                    <a href="#" class="btn">Durumu Sorgula <i class="flaticon-clock"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
